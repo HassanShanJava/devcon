@@ -1,13 +1,27 @@
-import React from 'react'
+import ExploreBtn from "@/components/explore-button";
+import React from "react";
 
 const page = () => {
   return (
     <section>
+      <h1 className="text-center">
+        The Hub for Every Dev <br /> Event You Can't Miss
+      </h1>
+      <p className="text-center mt-5">
+        Hackathon, Conference, Meetup, and more, All in One Place
+      </p>
+      <ExploreBtn />
 
-      <h1 className='text-center'>The Hub for Every Dev <br/> Event You Can't Miss</h1>
-      <p className='text-center mt-5'>Hackathon, Conference, Meetup, and more, All in One Place</p>
+      <div className="mt-20 space-y-7">
+        <h3>Featured Events</h3>
+        <ul className="events">
+          {[1, 2, 3, 4, 5].map((event) => (
+            <li key={event}>Event {event}</li>
+          ))}
+        </ul>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default page
+export default page;
